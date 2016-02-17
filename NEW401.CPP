@@ -43,15 +43,7 @@ void main()
 		if ((pos%part) == 0)
 			flag=1;
 
-		i=0;
-		while(a[i]!=0)
-		{
-			i++;
-		}
-		if(i>=29)
-		{
-			flag=2;
-		}
+
 //		printf("\n ::FLAG=%d::\n",flag);
 
 		if (flag==1)
@@ -149,16 +141,33 @@ void main()
 			}
 			printf("%d",a[i]);
 		}
+		i=0;
+		while(a[i]!=0)
+		{
+			i++;
+		}
+		if(i>=29)
+		{
+			flag=2;
+		}
 		if(flag == 2)
 		{
-			printf("\n Bus is full. Better luck next time!!!");
+			printf("\n");
+			for (i=0;i<80;i++)
+				printf("-");
+			printf("\n\n Bus is full. Better luck next time!!!\n\n");
+			for (i=0;i<80;i++)
+				printf("-");
 			break;
 		}
-		printf("\n\n Enter 1 to continue booking and 0 to exit:");
-		scanf("%d",&ch);
+		else
+		{
+			printf("\n\n Enter 1 to continue booking and 0 to exit:");
+			scanf("%d",&ch);
+			for (i=0;i<80;i++)
+				printf("-");
+		}
 
-		for (i=0;i<80;i++)
-			printf("-");
 	}while(ch != 0);
 
 
