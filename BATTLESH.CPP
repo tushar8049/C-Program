@@ -2,7 +2,7 @@
 #include<conio.h>
 
 char a[10][10],b[10][10];
-int i,j,n1,n2,m1,m2,ship1,m,n,count=0,xyz;
+int i,j,n1,n2,m1,m2,ship1,m,n,count=0,xyz,x,y;
 
 
 void battleship5()
@@ -10,6 +10,18 @@ void battleship5()
 	do
 	{
 	ship1=0;
+	clrscr();
+	printf("\n\n::FOR PLAYER 1::\n\n");
+	printf("\n Current Board Status.\n\n");
+
+	for (x=0;x<10;x++)
+	{
+		for(y=0;y<10;y++)
+		{
+			printf("%3c",a[x][y]);
+		}
+		printf("\n");
+	}
 	printf("\n Enter the range of co-cordinates of 5 dots ship:");
 	printf("\n Upper range a[i][j]:");
 	scanf("%d %d",&n1,&m1);
@@ -35,6 +47,7 @@ void battleship5()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else if(m1==m2)
@@ -57,12 +70,14 @@ void battleship5()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else
 	{
 		printf("Invalid Entry.");
 		ship1++;
+		getch();
 	}
 	}while(ship1==1);
 }
@@ -73,6 +88,18 @@ void battleship4()
 	do
 	{
 	ship1=0;
+	clrscr();
+	printf("\n\n::FOR PLAYER 1::\n\n");
+	printf("\n Current Board Status.\n\n");
+
+	for (x=0;x<10;x++)
+	{
+		for(y=0;y<10;y++)
+		{
+			printf("%3c",a[x][y]);
+		}
+		printf("\n");
+	}
 	printf("\n Enter the range of co-cordinates of 4 dots ship:");
 	printf("\n Upper range a[i][j]:");
 	scanf("%d %d",&n1,&m1);
@@ -98,6 +125,7 @@ void battleship4()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else if(m1==m2)
@@ -120,12 +148,14 @@ void battleship4()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else
 	{
 		printf("Invalid Entry.");
 		ship1++;
+		getch();
 	}
 	}while(ship1==1);
 }
@@ -136,6 +166,18 @@ void battleship3()
 	do
 	{
 	ship1=0;
+	clrscr();
+	printf("\n\n::FOR PLAYER 1::\n\n");
+	printf("\n Current Board Status.\n\n");
+
+	for (x=0;x<10;x++)
+	{
+		for(y=0;y<10;y++)
+		{
+			printf("%3c",a[x][y]);
+		}
+		printf("\n");
+	}
 	printf("\n Enter the range of co-cordinates of 3 dots ship:");
 	printf("\n Upper range a[i][j]:");
 	scanf("%d %d",&n1,&m1);
@@ -161,6 +203,7 @@ void battleship3()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else if(m1==m2)
@@ -183,12 +226,14 @@ void battleship3()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else
 	{
 		printf("Invalid Entry.");
 		ship1++;
+		getch();
 	}
 	}while(ship1==1);
 }
@@ -198,6 +243,18 @@ void battleship2()
 	do
 	{
 	ship1=0;
+	clrscr();
+	printf("\n\n::FOR PLAYER 1::\n\n");
+	printf("\n Current Board Status.\n\n");
+
+	for (x=0;x<10;x++)
+	{
+		for(y=0;y<10;y++)
+		{
+			printf("%3c",a[x][y]);
+		}
+		printf("\n");
+	}
 	printf("\n Enter the range of co-cordinates of 2 dots ship:");
 	printf("\n Upper range a[i][j]:");
 	scanf("%d %d",&n1,&m1);
@@ -223,6 +280,7 @@ void battleship2()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else if(m1==m2)
@@ -245,12 +303,14 @@ void battleship2()
 		{
 			printf("Invalid Entry.");
 			ship1++;
+			getch();
 		}
 	}
 	else
 	{
 		printf("Invalid Entry.");
 		ship1++;
+		getch();
 	}
 	}while(ship1==1);
 }
@@ -261,10 +321,10 @@ void player2()
 	clrscr();
 	do
 	{
-	xyz=0;
-	printf("\n\n::FOR PLAYER 1::\n\n");
+		xyz=0;
+		printf("\n\n::FOR PLAYER 2::\n\n");
 
-	for (x=0;x<10;x++)
+		for (x=0;x<10;x++)
 		{
 			for(y=0;y<10;y++)
 			{
@@ -273,25 +333,31 @@ void player2()
 			printf("\n");
 		}
 
-	printf("\n Enter the Co-Ordinates you want to fire:");
-	scanf("%d %d",&n,&m);
-	if (a[n][m]=='.')
-	{
-		b[n][m]='o';
-	}
-	else if (a[n][m]=='s')
-	     {
-		b[n][m]='x';
-		count++;
-	     }
-	     else
-	     {
-		printf("Invalid Entry");
-		xyz=1;
-	     }
-
-
-
+		printf("\n Enter the Co-Ordinates you want to fire:");
+		scanf("%d %d",&n,&m);
+		if (a[n][m]=='.')
+		{
+			b[n][m]='o';
+		}
+		else if (a[n][m]=='s')
+		{
+			b[n][m]='x';
+		}
+		else
+		{
+			printf("Invalid Entry");
+			xyz=1;
+		}
+		count=0;
+		for (x=0;x<10;x++)
+		{
+			for(y=0;y<10;y++)
+			{
+				if(b[x][y]=='x')
+					count++;
+			}
+			printf("\n");
+		}
 
 	}while(xyz==1);
 
@@ -316,13 +382,16 @@ void main()
 		printf("\n");
 	}
 	battleship5();
+
 	battleship4();
+
 	battleship3();
+
 	battleship3();
+
 	battleship2();
 
-
-       for (x=0;x<10;x++)
+	for (x=0;x<10;x++)
 	{
 		for(y=0;y<10;y++)
 		{
@@ -335,7 +404,7 @@ void main()
 	scanf("%d",&ch);
 	if (ch==2)
 	{
-		for(abc=0;abc<60;abc++)
+		for(abc=0;abc<45;abc++)
 		{
 			turn++;
 			player2();
