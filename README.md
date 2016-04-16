@@ -7,6 +7,7 @@ This mainly contains the C Programs that are based on real life logic.
 File Name 			        | 	Description
 --------------- 	| -------------
 [BATTLESH.CPP](https://github.com/tushar8049/C-Program/blob/master/BATTLESH.CPP)		| Battleship Game  
+[MINESWEEPER.CPP](https://github.com/tushar8049/C-Program/blob/master/MINESWEEPER.CPP)		| MineSweeper Game
 [NEW401.CPP](https://github.com/tushar8049/C-Program/blob/master/NEW401.CPP)		| Bus Seat booking Problem  
 [NEW402.CPP](https://github.com/tushar8049/C-Program/blob/master/NEW402.CPP)		| Day Calculator-Technique 1  
 [NEW403.CPP](https://github.com/tushar8049/C-Program/blob/master/NEW403.CPP)		| Day Calculator-Technique 2
